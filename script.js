@@ -95,3 +95,27 @@ function send(){
         document.getElementById("other").classList.remove("active");
     }
 }
+
+function prevStep1(){
+        document.getElementById("contacts").classList.add("hidden");
+        document.getElementById("mainInfo").classList.remove("hidden");
+}
+
+function prevStep2(){
+        document.getElementById("workPlace").classList.add("hidden");
+        document.getElementById("education").classList.add("hidden");
+        document.getElementById("otherEducation").classList.add("hidden");
+        document.getElementById("contacts").classList.remove("hidden");
+}
+
+function prevStep3(){
+        document.getElementById("workPlace").classList.remove("hidden");
+        document.getElementById("education").classList.remove("hidden");
+        document.getElementById("otherEducation").classList.remove("hidden");
+        document.getElementById("skills").classList.add("hidden");
+}
+
+function prevStep4(){
+        document.getElementById("skills").classList.remove("hidden");
+        document.getElementById("other").classList.add("hidden");
+}
