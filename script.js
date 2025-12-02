@@ -1,5 +1,5 @@
 function nextStep2(){
-    if (document.getElementById("фамилия").value.length ==   0) {
+    if (document.getElementById("surname").value.length ==   0) {
         alert('Укажите Фамилию');
     } else if (document.getElementById("name").value.length == 0){
         alert('Укажите Имя')
