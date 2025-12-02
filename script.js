@@ -44,6 +44,10 @@ function nextStep3(){
         document.getElementById("contacts").classList.add("hidden");
         document.getElementById("workPlace").classList.remove("hidden");
         document.getElementById("workPlace").classList.add("active");
+        document.getElementById("education").classList.remove("hidden");
+        document.getElementById("education").classList.add("active");
+        document.getElementById("otherEducation").classList.remove("hidden");
+        document.getElementById("otherEducation").classList.add("active");
     }
 }
 
@@ -52,25 +56,31 @@ function nextStep4(){
         alert('Укажите Место Вашей работы');
     } else if (document.getElementById("profession").value.length == 0){
         alert('Вы не указали вашу Профессию')
+    } else if (document.getElementById("almaMater").value.length == 0){
+        alert('Укажите Ваше учебное заведение')
+    } else if (document.getElementById("speciality").value.length == 0){
+        alert('Вы не указали вашу Специализацию')
     }   else{
         document.getElementById("workPlace").classList.add("hidden");
         document.getElementById("workPlace").classList.remove("active");
-        document.getElementById("education").classList.remove("hidden");
-        document.getElementById("education").classList.add("active");
-    }
-}
-
-function nextStep5(){
-    // if (document.getElementById("courses").value.length == 0) {
-    //     alert('Укажите Ваше учебное заведение');
-    // } else if (document.getElementById("speciality").value.length == 0){
-    //     alert('Вы не указали вашу Специализацию')
-    // }   else{
+        document.getElementById("education").classList.add("hidden");
+        document.getElementById("education").classList.remove("active");
         document.getElementById("otherEducation").classList.add("hidden");
         document.getElementById("otherEducation").classList.remove("active");
         document.getElementById("skills").classList.remove("hidden");
         document.getElementById("skills").classList.add("active");
-    // }
+    }
+}
+
+function nextStep5(){
+    if (document.getElementById("hardSkills").value.length == 0) {
+        alert('Укажите Ваши полезные навыки');
+    }   else{
+        document.getElementById("skills").classList.add("hidden");
+        document.getElementById("skills").classList.remove("active");
+        document.getElementById("other").classList.remove("hidden");
+        document.getElementById("other").classList.add("active");
+    }
 }
 
 function send(){
