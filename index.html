@@ -9,13 +9,120 @@
     <header></header>
     <main>
         <form action="https://formsubmit.co/your@email.com" method="POST">
-            <section id=""></section>
-            <section></section>
-            <section></section>
-            <section></section>
-            <section></section>
-            <section></section>
-            <section></section>
+            <section id="mainInfo" class="">
+                <h2>Основная информация</h2>
+
+                <label for="surname">Фамилия</label>
+                <input type="text" name="surname" id="surname">
+
+                <label for="name">Имя</label>
+                <input type="text" name="name" id="name">
+                
+                <label for="fathername">Отчество</label>
+                <input type="text" name="fathername" id="fathername">
+                
+                <label for="birth">Дата рождения</label>
+                <input type="date" name="birth" id="birth">                
+                
+                <label for="family">Семейное положение</label>
+                <select name="family" id="family">
+                    <option value="" selected disabled hidden>Выберите из списка</option>
+                    <option value="Замужем/Женат">Замужем/Женат</option>
+                    <option value="Холост/Свободна">Холост/Свободна</option>
+                </select>
+
+                <label for="country">Гражданство</label>
+                <select name="country" id="country" required>
+                    <option value="" selected disabled hidden>Выберите из списка</option>
+                    <option value="Республика Беларусь">Республика Беларусь</option>
+                    <option value="Российская Федерация">Российская Федерация</option>
+                    <option value="Иное">Иное</option>
+                </select>
+
+                <label for="city">Место жительства</label>
+                <input type="text" name="city" id="city">
+            </section>
+
+            <section id="contacts" class="">
+                <h2>Контакты</h2>
+
+                <label for="tel">Мобильный телефон</label>
+                <input placeholder="+375 (29) 123-45-67" type="tel" name="tel" id="tel" required>
+
+                <label for="email">Электртонная почта</label>
+                <input placeholder="aleksandr@iskra.by" type="email" name="email" id="email">
+
+                <label for="telegram">Telegram</label>
+                <input placeholder="Ваш никнейм" type="text" name="telegram" id="telegram" required>
+
+                <label for="instagram">Instagram</label>
+                <input placeholder="Ваш никнейм" type="text" name="instagram" id="instagram" required>
+
+                <label for="tiktok">TikTok</label>
+                <input placeholder="Ваш никнейм" type="text" name="tiktok" id="tiktok" required>
+            </section>
+
+            <section id="workPlace" class="">
+                <h2>Место работы</h2>
+
+                <label for="work">Место работы</label>
+                <input type="text" name="workPlace" id="workPlace">
+
+                <label for="profession">Должность/профессия</label>
+                <input type="text" name="profession" id="profession">
+            </section>
+
+            <section id="education" class="">
+                <h2>Образование</h2>
+
+                <label for="almaMater">Наименование учебного заведения</label>
+                <input type="text" name="almaMater" id="almaMater">
+
+                <label for="speciality">Специальность</label>
+                <input type="text" name="speciality" id="speciality">
+            </section>
+
+            <section id="otherEducation" class="">
+                <h2>Дополнительное образование</h2>
+
+                <label for="courses">Курсы повышения квалификации и переподготовки </label>
+                <textarea name="courses" id="courses" placeholder="идеологическая работа на предприятии, СМИ, связи с общественностью и т.п."></textarea>
+
+                <label for="otherEducation">Прохождение дополнительного обучения </label>
+                <textarea name="otherEducation" id="otherEducation" placeholder="курсы SMM-специалистов и т.п."></textarea>
+            </section>
+
+            <section id="skills" class="">
+                <h2>Дополнительные навыки</h2>
+
+                <label for="hardSkills">Ваши навыки</label>
+                <textarea name="hardSkills" id="hardSkills" placeholder="Работа с графическими редакторами (Photoshop), софтом Microsoft (PowerPoint), аудио- и видеомонтаж, фото, видеосьемка и т.п."></textarea>
+            </section>
+
+            <section id="Other" class="">
+                <h2>Прочее</h2>
+
+                <label for="minister">Являетесь ли вы депутатом, делегатом ВНС и т.д.</label>
+                <textarea name="minister" id="minister"></textarea>
+                
+                <label for="young">Состоите ли вы в Молодежном Совете (предприятия, города, области, Республики)</label>
+                <textarea name="young" id="young"></textarea>
+
+                <label for="community">Принадлежность к общественному объединению, профессиональному союзу (Белая Русь, БРСМ, БСЖ и т.д.)</label>
+                <textarea name="community" id="community"></textarea>
+
+                <label for="achievements">Расскажите о своих наградах и достижениях в различных сферах деятельности (спорт, наука, творчество и т.д.).</label>
+                <textarea name="achievements" id="achievements" placeholder="награжден: почетной грамотой, дипломом, медалью, кубком, выполнил разряд, КМС, мастер спорта (кем награжден, достижение, год получения)"></textarea>
+
+                <label for="why">Чем Вас заинтересовало вступление в молодежное движение «Искра»?</label>
+                <textarea name="why" id="why"></textarea>
+
+                <label for="otherSkills">Хотите рассказать о себе что-то еще?</label>
+                <textarea name="otherSkills" id="otherSkills" placeholder="интересы, хобби и увлечения"></textarea>
+            </section>
+
+            <button class="btn" type="submit">Send Message<i class="uil uil-message"></i></button>
+            <input type="hidden" name="_captcha" value="false">
         </form>
     </main>
     <footer></footer>
