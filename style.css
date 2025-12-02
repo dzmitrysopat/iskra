@@ -54,9 +54,9 @@ section{
 
 h2{
     margin: 10px 0;
-    padding: 5px;
+    padding: 5px 10px;
     color: #fff;
-    /* width: fit-content; */
+    width: fit-content;
     background: #383838;
     /* border-radius: 8px; */
 }
@@ -65,7 +65,7 @@ label,
 button,
 .button{
     padding: 5px 10px; 
-    width: fit-content;
+    /* width: fit-content; */
     color: #fff;
     background: #383838;
 }
@@ -102,4 +102,8 @@ button:hover,
 
 .hidden{
     display: none;
+}
+
+button, a.button{
+    width: 300px;
 }
