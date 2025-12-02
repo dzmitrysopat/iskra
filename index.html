@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Анкета члена Искры</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <header></header>
+    <header>
+        <img src="./logo.PNG" alt="">
+    </header>
     <main>
         <form action="https://formsubmit.co/your@email.com" method="POST">
-            <section id="mainInfo" class="">
+            <section id="mainInfo" class="active">
                 <h2>Основная информация</h2>
 
                 <label for="surname">Фамилия</label>
@@ -41,15 +44,19 @@
 
                 <label for="city">Место жительства</label>
                 <input type="text" name="city" id="city">
+
+                <article class="buttons">
+                    <a href="#" class="next-btn button" onclick="nextStep2()">Далее</a>
+                </article>
             </section>
 
-            <section id="contacts" class="">
+            <section id="contacts" class="hidden">
                 <h2>Контакты</h2>
 
                 <label for="tel">Мобильный телефон</label>
                 <input placeholder="+375 (29) 123-45-67" type="tel" name="tel" id="tel" required>
 
-                <label for="email">Электртонная почта</label>
+                <label for="email">Электронная почта</label>
                 <input placeholder="aleksandr@iskra.by" type="email" name="email" id="email">
 
                 <label for="telegram">Telegram</label>
@@ -60,19 +67,29 @@
 
                 <label for="tiktok">TikTok</label>
                 <input placeholder="Ваш никнейм" type="text" name="tiktok" id="tiktok" required>
+
+                <article class="buttons">
+                    <a href="#" class="prev-btn button" onclick="prevStep1()">Назад</a>
+                    <a href="#" class="next-btn button" onclick="nextStep3()">Далее</a>
+                </article>
             </section>
 
-            <section id="workPlace" class="">
+            <section id="workPlace" class="hidden">
                 <h2>Место работы</h2>
 
                 <label for="work">Место работы</label>
-                <input type="text" name="workPlace" id="workPlace">
+                <input type="text" name="work" id="work">
 
                 <label for="profession">Должность/профессия</label>
                 <input type="text" name="profession" id="profession">
+
+                <article class="buttons">
+                    <a href="#" class="prev-btn button" onclick="prevStep2()">Назад</a>
+                    <a href="#" class="next-btn button" onclick="nextStep4()">Далее</a>
+                </article>
             </section>
 
-            <section id="education" class="">
+            <section id="education" class="hidden">
                 <h2>Образование</h2>
 
                 <label for="almaMater">Наименование учебного заведения</label>
@@ -80,9 +97,14 @@
 
                 <label for="speciality">Специальность</label>
                 <input type="text" name="speciality" id="speciality">
+
+                <article class="buttons">
+                    <a href="#" class="prev-btn button" onclick="prevStep3()">Назад</a>
+                    <a href="#" class="next-btn button" onclick="nextStep5()">Далее</a>
+                </article>
             </section>
 
-            <section id="otherEducation" class="">
+            <section id="otherEducation" class="hidden">
                 <h2>Дополнительное образование</h2>
 
                 <label for="courses">Курсы повышения квалификации и переподготовки </label>
@@ -90,41 +112,59 @@
 
                 <label for="otherEducation">Прохождение дополнительного обучения </label>
                 <textarea name="otherEducation" id="otherEducation" placeholder="курсы SMM-специалистов и т.п."></textarea>
+
+                                <article class="buttons">
+                    <a href="#" class="prev-btn button" onclick="prevStep4()">Назад</a>
+                    <a href="#" class="next-btn button" onclick="nextStep6()">Далее</a>
+                </article>
             </section>
 
-            <section id="skills" class="">
+            <section id="skills" class="hidden">
                 <h2>Дополнительные навыки</h2>
 
                 <label for="hardSkills">Ваши навыки</label>
                 <textarea name="hardSkills" id="hardSkills" placeholder="Работа с графическими редакторами (Photoshop), софтом Microsoft (PowerPoint), аудио- и видеомонтаж, фото, видеосьемка и т.п."></textarea>
+
+                <article class="buttons">
+                    <a href="#" class="prev-btn button" onclick="prevStep5()">Назад</a>
+                    <a href="#" class="next-btn button" onclick="nextStep7()">Далее</a>
+                </article>
             </section>
 
-            <section id="Other" class="">
+            <section id="Other" class="hidden">
                 <h2>Прочее</h2>
 
                 <label for="minister">Являетесь ли вы депутатом, делегатом ВНС и т.д.</label>
-                <textarea name="minister" id="minister"></textarea>
+                <input name="minister" id="minister" type="text">
                 
-                <label for="young">Состоите ли вы в Молодежном Совете (предприятия, города, области, Республики)</label>
-                <textarea name="young" id="young"></textarea>
+                <label for="young">Состоите ли вы в Молодежном Совете</label>
+                <textarea name="young" id="young" placeholder="предприятия, города, области, Республики"></textarea>
 
-                <label for="community">Принадлежность к общественному объединению, профессиональному союзу (Белая Русь, БРСМ, БСЖ и т.д.)</label>
-                <textarea name="community" id="community"></textarea>
+                <label for="community">Принадлежность к общественному объединению, профессиональному союзу</label>
+                <textarea name="community" id="community" placeholder="Белая Русь, БРСМ, БСЖ и т.д."></textarea>
 
-                <label for="achievements">Расскажите о своих наградах и достижениях в различных сферах деятельности (спорт, наука, творчество и т.д.).</label>
-                <textarea name="achievements" id="achievements" placeholder="награжден: почетной грамотой, дипломом, медалью, кубком, выполнил разряд, КМС, мастер спорта (кем награжден, достижение, год получения)"></textarea>
+                <label for="achievements">Расскажите о своих наградах и достижениях в различных сферах деятельности</label>
+                <textarea name="achievements" id="achievements" 
+                placeholder="Cпорт, наука, творчество и т.д.
+Награжден: почетной грамотой, дипломом, медалью, кубком, выполнил разряд, КМС, мастер спорта (кем награжден, достижение, год получения)"></textarea>
 
                 <label for="why">Чем Вас заинтересовало вступление в молодежное движение «Искра»?</label>
                 <textarea name="why" id="why"></textarea>
 
                 <label for="otherSkills">Хотите рассказать о себе что-то еще?</label>
                 <textarea name="otherSkills" id="otherSkills" placeholder="интересы, хобби и увлечения"></textarea>
+
+                <article class="buttons">
+                    <a href="#" class="prev-btn button" onclick="prevStep6()">Назад</a>
+                    <button class="btn" type="submit" onclick="send()">Send Message<i class="uil uil-message"></i></button>
+                </article>
             </section>
 
-            <button class="btn" type="submit">Send Message<i class="uil uil-message"></i></button>
             <input type="hidden" name="_captcha" value="false">
         </form>
     </main>
     <footer></footer>
+
+    <script src="./script.js"></script>
 </body>
 </html>

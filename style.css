@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+*{
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    color: #383838;
+    padding: 0;
+    margin: 0;
+    font-weight: 100;
+    /* outline: 2px solid lightgreen; */
+}
+
+html {
+    scroll-behavior: smooth;
+    opacity: 1;
+    transition: all 2s;
+}
+
+body{
+    width: auto;
+    min-height: 100vh;
+    margin: 0 auto;
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header{
+    margin: 0;
+}
+
+header > img{
+    margin: 10px 0;
+    /* max-height: 15vh; */
+    width: 15vw;
+}
+
+section{
+    display: flex;
+    flex-direction: column; 
+    width: fit-content;
+}
+
+h2{
+    margin: 10px 0;
+    padding: 5px;
+    color: #fff;
+    /* width: fit-content; */
+    background: #383838;
+    /* border-radius: 8px; */
+}
+
+label,
+button,
+.button{
+    padding: 5px 10px; 
+    width: fit-content;
+    color: #fff;
+    background: #383838;
+}
+
+input, textarea, select, option{
+    border: 2px solid #383838;
+    margin: 0 0 15px 0;
+    padding: 5px 10px;
+    height: 25px;
+    /* width: fit-content; */
+}
+
+select{
+    height: 40px;
+}
+
+textarea{
+    height: 80px;
+}
+
+button, .button{
+    padding: 5px 10px;
+    font-size: 20px;
+    border: 2px solid #383838;
+    transition: all .4s;
+}
+
+button:hover,
+.button:hover{
+    border: 2px solid #383838;
+    color: #383838;
+    background: #fff;
+}
+
+.hidden{
+    display: none;
+}
