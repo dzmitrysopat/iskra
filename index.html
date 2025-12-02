@@ -11,7 +11,7 @@
         <img src="./logo.PNG" alt="">
     </header>
     <main>
-        <form action="https://formsubmit.co/your@email.com" method="POST">
+        <form action="https://formsubmit.co/dzmitrysopat@gmail.com" method="POST" enctype="multipart/form-data">
             <section id="mainInfo" class="active">
                 <h2>Основная информация</h2>
 
@@ -120,6 +120,9 @@
                 <label for="hardSkills">Ваши навыки</label>
                 <textarea name="hardSkills" id="hardSkills" placeholder="Работа с графическими редакторами (Photoshop), софтом Microsoft (PowerPoint), аудио- и видеомонтаж, фото, видеосьемка и т.п."></textarea>
 
+                <label for="photo">Загрузите Ваше фото</label>
+                <input type="file" name="photo" id="photo" accept="image/png, image/jpeg">
+
                 <article class="buttons">
                     <a href="#" class="prev-btn button" onclick="prevStep3()">Назад</a>
                     <a href="#" class="next-btn button" onclick="nextStep5()">Далее</a>
@@ -156,6 +159,7 @@
             </section>
 
             <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
         </form>
     </main>
     <footer></footer>

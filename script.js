@@ -1,19 +1,5 @@
-// nextSteps
-
-// nextStep2()
-// nextStep3()
-// nextStep4()
-// nextStep5()
-
-// prevSteps
-
-// prevStep1()
-// prevStep2()
-// prevStep3()
-// prevStep4()
-
 function nextStep2(){
-    if (document.getElementById("surname").value.length ==   0) {
+    if (document.getElementById("фамилия").value.length ==   0) {
         alert('Укажите Фамилию');
     } else if (document.getElementById("name").value.length == 0){
         alert('Укажите Имя')
@@ -28,7 +14,6 @@ function nextStep2(){
     }   else{
         document.getElementById("mainInfo").classList.add("hidden");
         document.getElementById("contacts").classList.remove("hidden");
-        document.getElementById("contacts").classList.add("active");
     }
 }
 
@@ -40,14 +25,10 @@ function nextStep3(){
     } else if (document.getElementById("telegram").value.length == 0){
         alert('Вы забыли указать Ваш Никнейм в Telegram')
     }   else{
-        document.getElementById("contacts").classList.remove("active");
         document.getElementById("contacts").classList.add("hidden");
         document.getElementById("workPlace").classList.remove("hidden");
-        document.getElementById("workPlace").classList.add("active");
         document.getElementById("education").classList.remove("hidden");
-        document.getElementById("education").classList.add("active");
         document.getElementById("otherEducation").classList.remove("hidden");
-        document.getElementById("otherEducation").classList.add("active");
     }
 }
 
@@ -62,24 +43,21 @@ function nextStep4(){
         alert('Вы не указали вашу Специализацию')
     }   else{
         document.getElementById("workPlace").classList.add("hidden");
-        document.getElementById("workPlace").classList.remove("active");
         document.getElementById("education").classList.add("hidden");
-        document.getElementById("education").classList.remove("active");
         document.getElementById("otherEducation").classList.add("hidden");
-        document.getElementById("otherEducation").classList.remove("active");
         document.getElementById("skills").classList.remove("hidden");
-        document.getElementById("skills").classList.add("active");
     }
 }
 
 function nextStep5(){
     if (document.getElementById("hardSkills").value.length == 0) {
         alert('Укажите Ваши полезные навыки');
+    } else if (document.getElementById("photo").files.length == 0){
+        alert('Загрузите Ваше фото')
     }   else{
         document.getElementById("skills").classList.add("hidden");
-        document.getElementById("skills").classList.remove("active");
         document.getElementById("other").classList.remove("hidden");
-        document.getElementById("other").classList.add("active");
+        // console.log(document.getElementById("photo").files.length);
     }
 }
 
@@ -92,7 +70,6 @@ function send(){
         alert('Принадлежность к общественному объединению...')
     }   else{
         document.getElementById("other").classList.add("hidden");
-        document.getElementById("other").classList.remove("active");
     }
 }
 
