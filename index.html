@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Анкета члена Искры</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./sent.PNG" type="image/x-icon">
 </head>
 <body>
     <header>
-        <img src="./logo.PNG" alt="">
+        <a href="./index.html"><img src="./logo.PNG" alt=""></a>
     </header>
     <main>
         <form action="https://formsubmit.co/dzmitrysopat@gmail.com" method="POST" enctype="multipart/form-data">
@@ -92,11 +93,6 @@
 
                 <label for="speciality">Специальность</label>
                 <input type="text" name="Специальность" id="speciality">
-
-                <article class="buttons">
-                    <a href="#" class="prev-btn button" onclick="prevStep3()">Назад</a>
-                    <a href="#" class="next-btn button" onclick="nextStep5()">Далее</a>
-                </article>
             </section>
 
             <section id="otherEducation" class="hidden">
@@ -160,6 +156,8 @@
 
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_subject" value="Анкета Искра">
+            <input type="hidden" name="_next" value="sent.html">
         </form>
     </main>
     <footer></footer>
