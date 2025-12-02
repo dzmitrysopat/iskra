@@ -46,6 +46,11 @@ main, article{
     margin: 25px 0;
 }
 
+article{
+    display: flex;
+    gap: 25px;
+}
+
 section{
     display: flex;
     flex-direction: column; 
