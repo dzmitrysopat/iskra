@@ -110,5 +110,188 @@ button:hover,
 }
 
 button, a.button{
-    width: 300px;
+    text-align: center;
+    width: 90vw;
+}
+
+input[type=checkbox]{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+div.checkbox-container{
+    display: block;
+    position: relative;
+    transition: all .4s;
+    padding-left: 50px;
+    cursor: pointer;
+    font-size: 22px;
+    margin-bottom: 25px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-bottom: 50px;
+}
+
+div.checkbox-container > label{
+    cursor: pointer;
+    position: absolute;
+    padding-left: 50px;
+    left: 0;
+    font-size: 20px;
+    max-width: 400px;
+    background: none;
+    color: #383838;
+}
+
+div.checkbox-container > .checkmark {
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    height: 32px;
+    width: 32px;
+    border: 2px solid #383838;
+    /* border-radius: 8px; */
+    transition: all .4s;
+    background-color: #383838;
+}
+
+div.checkbox-container:hover input ~ .checkmark{
+    /* background-color: #555555; */
+}
+
+.checkbox-container input:checked ~ .checkmark {
+    background-color: #383838;
+    /* border: 2px solid #ddd; */
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.checkbox-container .checkmark:after {
+    left: 10px;
+    top: 5px;
+    width: 8px;
+    height: 16px;
+    border: solid #ddd;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+@media (min-width: 1024px) {
+    body {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    header > a > img {
+        width: 300px;
+        margin: 20px auto;
+        display: block;
+        max-height: 100px;
+        object-fit: contain;
+    }
+
+    main {
+        margin: 30px auto;
+        padding: 0 20px;
+    }
+
+    section {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+        padding: 10px 20px;
+        margin: 20px 0;
+    }
+
+    label {
+        font-size: 1rem;
+        display: block;
+    }
+
+    input, textarea, select, option {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+        font-size: 1rem;
+        padding: 10px 15px;
+        box-sizing: border-box;
+    }
+
+    input {
+        height: 45px;
+    }
+
+    select {
+        height: 45px;
+    }
+
+    textarea {
+        height: 100px;
+        min-height: 100px;
+        resize: vertical;
+    }
+
+    .buttons {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        margin: 30px 0;
+    }
+
+    button, .button {
+        width: auto;
+        min-width: 150px;
+        padding: 12px 30px;
+        font-size: 1.1rem;
+    }
+
+    .checkbox-container {
+        margin-bottom: 30px;
+        padding-left: 60px;
+    }
+
+    .checkbox-container > label {
+        font-size: 1rem;
+        padding-left: 60px;
+        max-width: 600px;
+    }
+
+    .checkbox-container > .checkmark {
+        width: 40px;
+        height: 40px;
+        top: 8px;
+    }
+
+    .checkbox-container .checkmark:after {
+        left: 13px;
+        top: 7px;
+        width: 10px;
+        height: 20px;
+    }
+
+    form {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+    }
 }

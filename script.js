@@ -10,7 +10,13 @@ function nextStep2(){
     } else if (document.getElementById("country").value.length == 0){
         alert('Укажите Ваше Гражданство')
     } else if (document.getElementById("city").value.length == 0){
-        alert('Забыли указать Место жительства')    
+        alert('Забыли указать Место жительства')
+    } else if (document.getElementById("number").value.length == 0){
+        alert('Укажите номер партийного билета')
+    } else if (document.getElementById("date").value.length == 0){
+        alert('Забыли указать дату выдачи')
+    } else if (document.getElementById("state").value.length == 0){
+        alert('Забыли отделение партии')    
     }   else{
         document.getElementById("mainInfo").classList.add("hidden");
         document.getElementById("contacts").classList.remove("hidden");
@@ -68,6 +74,8 @@ function send(){
         alert('Состоите ли вы в Молодежном Совете?')
     } else if (document.getElementById("community").value.length == 0){
         alert('Принадлежность к общественному объединению...')
+        }   else if (document.getElementById("agree").checked == false) {
+          alert('Нам нужно Ваше согласие на обработку получаемых данных');
     }   else{
         document.getElementById("other").classList.add("hidden");
     }

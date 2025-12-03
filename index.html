@@ -46,6 +46,15 @@
                 <label for="city">Место жительства</label>
                 <input type="text" name="Место жительства" id="city">
 
+                <label for="number">Номер партийного билета</label>
+                <input type="number" name="Номер партийного билета" id="number">
+
+                <label for="date">Дата выдачи</label>
+                <input type="date" name="Дата выдачи" id="date">    
+                
+                <label for="state">Отделение партии, к которому вы относитесь</label>
+                <textarea name="Отделение партии" id="state" placeholder="пример: Светлогорское районное отделение Гомельской области"></textarea>
+
                 <article class="buttons">
                     <a href="#" class="next-btn button" onclick="nextStep2()">Далее</a>
                 </article>
@@ -147,6 +156,12 @@
 
                 <label for="otherSkills">Хотите рассказать о себе что-то еще?</label>
                 <textarea name="Хотите рассказать о себе что-то еще?" id="otherSkills" placeholder="интересы, хобби и увлечения"></textarea>
+
+                <div class="input-block checkbox-container">
+                <input type="checkbox" name="agree" id="agree">
+                <span class="checkmark"></span>
+                <label for="agree">Я даю согласие на обработку моих персональных данных</label>    
+                </div>
 
                 <article class="buttons">
                     <a href="#" class="prev-btn button" onclick="prevStep4()">Назад</a>
